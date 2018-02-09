@@ -2,7 +2,7 @@
 
 ## What's Nylo?
 
-**Nylo** is a new programming language ideated by [@veggero](https://github.com/veggero) and developed by all the [@pyTeens](https://github.com/pyTeens) team.
+**Nylo** is a new programming language ideated by [@veggero](https://github.com/veggero) and [@AmerigoGuadagno](https://github.com/AmerigoGuadagno), and developed by all the [@pyTeens](https://github.com/pyTeens) team.
 Its __performance__ and its __syntax__ are so awesome that you'll reconsider sex.
 
 ```
