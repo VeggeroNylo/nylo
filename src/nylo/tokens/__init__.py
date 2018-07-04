@@ -23,6 +23,6 @@
 
 from .keyword import Keyword
 from .numstr import Number, String
+from .struct import Struct
 from .symbol import Symbol
 from .value import Value
-from .struct import Struct

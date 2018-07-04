@@ -2,8 +2,10 @@
 Contains the Lexer class definition.
 """
 
-from abc import abstractmethod, ABC as Abstract
+from abc import ABC as Abstract
+
 from nylo.parser import Parser
+
 
 class Token(Abstract):
     """This is the base class for every
@@ -11,8 +13,8 @@ class Token(Abstract):
     """
 
     def __init__(self, *values):
-        "Initialize the token object."
-    
+        """Initialize the token object."""
+
     def can_parse(parser: Parser) -> bool:
         """Check if the Token can be parsed,
         by checking if the parser starts with
@@ -26,15 +28,15 @@ class Token(Abstract):
         parser.hasparsed; might call parser.parse for
         parsing more tokens.
         """
-    
+
     def transpile(self, mesh: dict, path: tuple):
         """Traspile the value into the mesh; initialize
         mesh nodes and their values. Returns the token
         that should go to interpretation."""
-        
+
     def interprete(self, mesh: dict, interpreting: list, interpreted: list):
-        NotImplemented #TODO
-        
+        raise NotImplemented()  # TODO
+
     def evaluate(self, mesh: dict, interpreting: list, interpreted: list):
         """Evaluate the Token, adding things to interpreter or
         adding things that has been interpreted to the two lists.
@@ -42,16 +44,16 @@ class Token(Abstract):
         variables will add other tokens to the interpreting list
         to interpreter.
         """
-        
+
     def chroot(self, oldroot: tuple, newroot: tuple):
         """Change the root location for absolute variable
         references.
         """
-        
+
     def __hash__(self):
         return hash(tuple(tuple(x) if isinstance(x, list)
-            else x for key, x in self.__dict__.items()
-            if key != 'location'))
-    
+                          else x for key, x in self.__dict__.items()
+                          if key != 'location'))
+
     def __eq__(self, other):
         return hash(self) == hash(other)

@@ -21,7 +21,7 @@ class Parser:
         self.parsed, self.parsing = [], [Struct()]
         self.reading_at = reading_at
         self.line, self.char = 1, 1
-        
+
     @staticmethod
     def parsecode(code):
         parser = Parser(code)
@@ -96,11 +96,11 @@ class Parser:
     def parse(self, *args):
         "Add tokens to be parsed."
         self.parsing.extend(args)
-        
+
     def hasparsed(self, *args):
         "Add parsed tokens."
         self.parsed.extend(args)
-        
+
     def getarg(self):
         "Get the last parsed token."
         return self.parsed.pop()

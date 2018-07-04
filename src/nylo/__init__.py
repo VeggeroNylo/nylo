@@ -22,13 +22,11 @@
 # SOFTWARE.
 
 
+from .builtins import If, builtins
+from .interpreter import interprete
 from .parser import Parser
 from .token import Token
-from .interpreter import interprete
-from .builtins import If, builtins
 from .tokens.keyword import Keyword
-import time
-
 
 __author__ = 'Veggero il Veggente'
 __url__ = 'https://github.com/veggero/nylo'
