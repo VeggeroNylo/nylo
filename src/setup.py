@@ -26,10 +26,7 @@ from setuptools import setup
 setup(
     name='nylo',
     version='0.1.0',
-    packages=[
-        'nylo', 'nylo.lexers', 'nylo.lexers.struct', 'nylo.lexers.values',
-        'nylo.objects', 'nylo.objects.interfaces', 'nylo.objects.struct',
-        'nylo.objects.values'],
+    packages=['nylo', 'nylo.tokens'],
     url='https://github.com/veggero/nylo',
     license='GNU GENERAL PUBLIC LICENSE',
     author='veggero',

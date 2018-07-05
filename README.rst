@@ -1,5 +1,7 @@
-Welcome to nylo |image0|
+Welcome to nylo
 ========================
+
+|image0|
 
 ::
 
@@ -38,7 +40,7 @@ How to contribute
 -----------------
 
 *In primis* (“firstable”), you **must** be a member of `pyTeens`_, then
-**ask** [@veggero](https://github.com/veggero)!
+**ask** @veggero!
 
 Present and future of project
 -----------------------------

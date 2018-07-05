@@ -121,8 +121,11 @@ class Get(Token):
 
     def __init__(self, keyword=None, gets=None, toev=None):
         self.keyword, self.gets, self.toev = keyword, gets, toev
+        self.brackets = False
+
 
     def parse(self, parser):
+        from nylo.tokens.struct import Struct
         if not self.keyword:
             if not parser.starts_with('.'):
                 return
@@ -130,14 +133,15 @@ class Get(Token):
             self.gets, self.toev = [], []
         else:
             self.gets.append(parser.getarg())
-            if parser.starts_with(')'):
-                parser.move()
+            if self.brackets:
+                self.brackets = False
                 self.toev.append(self.gets[-1])
         if parser.starts_with('.'):
             parser.move()
             if parser.starts_with('('):
-                parser.move()
-            return parser.parse(self, Value())
+                self.brackets = True
+                return parser.parse(self, Struct())
+            return parser.parse(self, SingleValue())
         return parser.hasparsed(self)
 
     def transpile(self, mesh, path):
