@@ -16,5 +16,6 @@ examples:
     a.(x)
     a.(y)
     a.(1+1)
+    a.(a.x)
 
--> examples.8
+-> examples.9

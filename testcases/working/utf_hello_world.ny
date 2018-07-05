@@ -1,1 +1,1 @@
--> print(«Tau world»)
+-> «Tau world»
