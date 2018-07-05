@@ -2,7 +2,7 @@ a:
     "this", "is", "cool"
     "a": "first letter", "b": "second one"
     x: 1, y: 2
-    
+
 x: 0
 y: "a"
 
